@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <script language="javascript" type="text/javascript"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+  <img class="main" src="">
+  <p>
+
+  <img src="/Users/jennawittich/crosby.jpg" alt="" id="crosby" />
+  <img src="/Users/jennawittich/mihrab.jpg" alt="" id="mihrab"/>
+  <img src="/Users/jennawittich/hockney.jpg" alt="" id="hockney"/>
+  <img src="/Users/jennawittich/monet.jpg" alt="" id="monet"/>
+  <img src="/Users/jennawittich/goldfish.jpg" alt="" id="goldfish"/>
+  </p>
+
+<script>
+  var Artwork = function(name, price, smallimage, largeimage)
+{
+  this.name = name;
+  this.price = price + " million dollars";
+  this.smallimage = smallimage;
+  this.largeimage = largeimage;
+};
+var hockney = new Artwork("Hockney Painting", "8.2" , "/Users/jennawittich/hockney.jpg", "/Users/jennawittich/hockney.jpg" );
+var mihrab = new Artwork("Islamic Prayer Niche", "7.3" , "/Users/jennawittich/mihrab.jpg", "/Users/jennawittich/mihrab.jpg");
+var crosby = new Artwork("Crosby Painting", "4.1" , "/Users/jennawittich/crosby.jpg", "/Users/jennawittich/crosby.jpg");
+var  monet= new Artwork("Monet Painting", "12.9" , "/Users/jennawittich/monet.jpg", "/Users/jennawittich/monet.jpg");
+var goldfish = new Artwork("Hockney Painting", "3.4" , "/Users/jennawittich/goldfish.jpg", "/Users/jennawittich/goldfish.jpg");
+//var work2 = new Artwork("Goldfish");
+//see if this array works
+//var works = new Array(crosby, mihrab, hockney, monet, goldfish);
+
+$('p img').css({
+    'width':'75px',
+    'border':'1px solid #F00'
+});
+
+//Now for each img binding click event to change the src of the main image.
+$('p img').on("mouseenter", function(){
+    //alert($(this).attr('src'));
+    $('.main').attr('src', $(this).attr('src'));
+    $("")
+
+
+});
+$('p img').hover(function(){
+        //alert($(this).attr('src'));
+        //$('.main').attr('src', $(this).attr('src'));
+  $('.main').fadeIn(3000);
+
+},function(){
+    $('.main').fadeOut();
+   // $('.main').fadeIn(3000);
+});
+//for words
+
+
+//var displayimage = function(pic) {
+//  fill (255, 0, 0);
+  //var img = <img src= "goldfish.jpg">;
+  //or use getimage
+//  image(img);
+  //var txt = pic.name + "div" + pic.price;
+//  text(txt, pic.name, pic.price);
+//};
+//var gallery = new Array();
+
+//gallery[0] = new Image();
+//gallery[0].src = 'http://www.metmuseum.org/-/media/images/exhibitions/2012/byzantium-and-islam/blog/jewelry1.jpg';
+
+//gallery1] = new Image();
+//gallery[1].src = 'images/img/Splash_image2.jpg';
+
+//var ArrayOfImages = ['/Users/jennawittich/goldfish.jpg', '/Users/jennawittich/mihrab.jpg', '/Users/jennawittich/monet.jpg', '/Users/jennawittich/crosby.jpg', '/Users/jennawittich/hockney.jpg']; //your assumed array
+//ArrayOfImages.forEach(function(image) {
+//  var img = document.createElement('img');
+  //img.src = image;
+  //img.height = "45";
+  //img.width = "50";
+  //document.body.appendChild(img);
+//});
+</script>
+
+</body>
+</html>
