@@ -9,33 +9,8 @@
   {
     float: left;
     position: relative;
-    display: inline-block;
     z-index: 0;
   }
-  h3
-  {
-    position: absolute;
-    z-index: 1;
-    display: inline-block;
-    padding-left: 4%;
-    opacity: 0;
-  }
-    #art0 h3 {
-      padding-left: 7%;
-    }
-    #art1 h3 {
-      padding-left: 7%;
-    }
-    #art2 h3 {
-      padding-left: 7%;
-    }
-    #art3 h3 {
-      padding-left: 7%;
-    }
-    #art4 h3 {
-      padding-left: 7%;
-    }
-
 </style>
 </head>
 <body>
@@ -80,7 +55,7 @@ document.write("<div id='art4'>" +
 
 
  $("img").css({
-    'width':'75px',
+    'width':'100px',
     'border':'1px solid #F00'
  });
 
@@ -89,7 +64,7 @@ $(document).ready (function(e) {
  var newpic = "<img src=" + $(this).attr("src") + "></img>";
   $('#bigpic')
     .html($(newpic)
-    .animate({height:'200', opacity: '0'}, 10)
+    .animate({width:'500', opacity: '0'}, 10)
     .fadeTo("slow" ,1));
   })
 $("img").mouseleave(function(e){
